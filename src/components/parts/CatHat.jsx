@@ -15,6 +15,13 @@ export const CatHat = ({ }) => {
             }}
         />
 
+        <Shape stroke={20}
+            color="hsl(var(--s))"
+            translate={{
+                y: -250
+            }}
+        />
+
 
     </Shape>
 }
