@@ -1,5 +1,6 @@
 import { Cylinder, Hemisphere, Shape } from "react-zdog"
 import { CatButt } from "../parts/CatButt"
+import { CatLeg } from "../parts/CatLeg"
 import { CatTail } from "../parts/CatTail"
 
 export const CatBody = ({ }) => {
@@ -21,8 +22,17 @@ export const CatBody = ({ }) => {
                 }}
             >
                 <CatTail zPos={100} />
-                <CatButt zPos={150} stroke={3}/>
+                <CatButt zPos={150} stroke={3} />
             </Hemisphere>
+
+            {/*  Back right leg */}
+            <CatLeg xPos={-150} yPos={0} zPos={-150} stroke={20} />
+            <CatLeg xPos={150} yPos={0} zPos={-150} stroke={20} />
+
+
+            <CatLeg xPos={-150} yPos={0} zPos={150} stroke={20} />
+            <CatLeg xPos={150} yPos={0} zPos={150} stroke={20} />
+
 
 
         </Cylinder>
