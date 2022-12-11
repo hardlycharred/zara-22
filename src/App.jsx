@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import { Illustration } from 'react-zdog'
-import { CatHead } from './components/parts/CatHead'
+import { CatHead } from './components/models/CatHead'
 import { Theme } from 'react-daisyui'
+import { Cat } from './components/models/Cat'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   return <Theme dataTheme={THEMES.random()}>
     <div style={{ width: '100vw', height: '100vh' }} className="m-0">
       <Illustration dragRotate={true} element="svg" className="m-0">
-        <CatHead />
+        <Cat />
       </Illustration>
     </div >
   </Theme >

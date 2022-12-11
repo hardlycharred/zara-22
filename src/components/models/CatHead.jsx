@@ -1,8 +1,8 @@
 import { Hemisphere, Shape } from "react-zdog"
-import { CatEar } from "./CatEar";
-import { CatEye } from "./CatEye";
-import { CatHat } from "./CatHat";
-import { CatMouth } from "./CatMouth";
+import { CatEar } from "../parts/CatEar";
+import { CatEye } from "../parts/CatEye";
+import { CatHat } from "../parts/CatHat";
+import { CatMouth } from "../parts/CatMouth";
 
 export const CatHead = () => {
 
