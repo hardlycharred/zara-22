@@ -1,4 +1,4 @@
-import { Hemisphere, Shape } from "react-zdog"
+import { Shape } from "react-zdog";
 import { CatEar } from "../parts/CatEar";
 import { CatEye } from "../parts/CatEye";
 import { CatHat } from "../parts/CatHat";
@@ -13,14 +13,14 @@ export const CatHead = () => {
 
   return <>
 
-    {/* Left Ear */}
-    <CatEar xMid={-80} size={40} zPos={earsZPos} />
-    {/* Right Ear */}
-    <CatEar xMid={80} size={40} zPos={earsZPos} />
 
     {/* He face */}
-    {/* <Shape stroke={300} color="#ededf0"> */}
     <Shape stroke={300} color="hsl(var(--p))">
+
+      {/* Left Ear */}
+      <CatEar xMid={-80} size={40} zPos={earsZPos} />
+      {/* Right Ear */}
+      <CatEar xMid={80} size={40} zPos={earsZPos} />
       <CatHat />
 
       {/* Left Eye */}

@@ -1,6 +1,6 @@
 import { Hemisphere, Shape } from "react-zdog"
 
-export const CatEar = ({ xMid, size, zPos }) => {
+export const CatEar = ({ xMid, size, zPos, ...props }) => {
   return <>
     <Shape path={
       [ // triangle
@@ -12,7 +12,7 @@ export const CatEar = ({ xMid, size, zPos }) => {
       fill={true}
       color="hsl(var(--pf))"
       stroke={20}
-    // rotate={{z: Math.PI / 3}}
+      {...props}
     />
   </>
 }
