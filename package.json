@@ -3,14 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://hardlycharred.github.io/zara-22",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-spring/zdog": "^9.6.0",
     "daisyui": "^2.43.0",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-daisyui": "^2.4.7",
     "react-dom": "^18.2.0",
