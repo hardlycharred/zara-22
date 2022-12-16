@@ -1,9 +1,20 @@
-import { Cylinder, Hemisphere, Shape } from "react-zdog"
+import { useSpring } from "@react-spring/zdog"
+import { useEffect, useRef, useState } from "react"
+import { Cylinder, Hemisphere, Shape, useRender } from "react-zdog"
 import { CatButt } from "../parts/CatButt"
 import { CatLeg } from "../parts/CatLeg"
 import { CatTail } from "../parts/CatTail"
 
 export const CatBody = ({ }) => {
+
+    const [up, setUp] = useState(true);
+    const { leftLegScale, rightLegScale } = useSpring({
+        leftLegScale: up ? 1 : 0.8,
+        rightLegScale: up ? 0.8 : 1
+    })
+
+    setInterval(() => setUp(prev=> !prev), 200);
+
 
     return <Shape visible={false} translate={{ y: 80, z: -300 }}>
         {/* Cat tube */}
@@ -30,8 +41,8 @@ export const CatBody = ({ }) => {
             <CatLeg xPos={150} yPos={0} zPos={-150} stroke={20} />
 
 
-            <CatLeg xPos={-150} yPos={0} zPos={150} stroke={20} />
-            <CatLeg xPos={150} yPos={0} zPos={150} stroke={20} />
+            <CatLeg xPos={-150} yPos={0} zPos={150} stroke={20} scale={leftLegScale} />
+            <CatLeg xPos={150} yPos={0} zPos={150} stroke={20} scale={rightLegScale} />
 
 
 
