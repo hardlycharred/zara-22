@@ -13,7 +13,7 @@ export const CatBody = ({ }) => {
         rightLegScale: up ? 0.8 : 1
     })
 
-    setInterval(() => setUp(prev=> !prev), 200);
+    setInterval(() => setUp(prev=> !prev), 150);
 
 
     return <Shape visible={false} translate={{ y: 80, z: -300 }}>

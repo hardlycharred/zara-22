@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import { Illustration } from 'react-zdog'
+import { Illustration, Shape } from 'react-zdog'
+import * as Zdog from 'react-zdog'
+
 import { CatHead } from './components/models/CatHead'
 import { Theme } from 'react-daisyui'
 import { Cat } from './components/models/Cat'
+import { Cake } from './components/models/Cake'
 
 function App() {
 
@@ -20,10 +23,18 @@ function App() {
   return <Theme dataTheme={THEMES.random()}>
     <div style={{ width: '100vw', height: '100vh' }} className="m-0">
       <Illustration dragRotate={true} element="svg" className="m-0">
-        <Cat
-          // xRotation={-0.25}
-          yRotation={0.5}
-        />
+        <Shape visible={false}
+          rotate={{
+            // x:- 0.25,
+            y: 0.5
+          }}
+        >
+          <Cat />
+          <Cake
+            yPos={320}
+            zPos={500}
+          />
+        </Shape>
       </Illustration>
     </div >
   </Theme >
