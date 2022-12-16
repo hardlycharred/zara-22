@@ -20,7 +20,7 @@ function App() {
   return <Theme dataTheme={THEMES.random()}>
     <div style={{ width: '100vw', height: '100vh' }} className="m-0">
       <Illustration dragRotate={true} element="svg" className="m-0">
-        <Cat />
+        <Cat yRotation={0.5}/>
       </Illustration>
     </div >
   </Theme >

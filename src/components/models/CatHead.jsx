@@ -3,6 +3,7 @@ import { CatEar } from "../parts/CatEar";
 import { CatEye } from "../parts/CatEye";
 import { CatHat } from "../parts/CatHat";
 import { CatMouth } from "../parts/CatMouth";
+import { CatWhiskers } from "../parts/CatWhiskers";
 
 export const CatHead = () => {
 
@@ -27,6 +28,7 @@ export const CatHead = () => {
       <CatEye xPos={-60} yPos={-30} zPos={eyesZPos} scleraSize={40} />
       {/* Right Eye */}
       <CatEye xPos={60} yPos={-30} zPos={eyesZPos} scleraSize={40} />
+      <CatWhiskers xGap={110} yPos={0} zPos={100} />
 
       <CatMouth zPos={eyesZPos} />
 
